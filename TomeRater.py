@@ -3,7 +3,6 @@ class User(object):
         self.name = name
         self.email = email
         self.books = { }
-        #print("!!! USER "+email+" created")
 
     def get_email(self):
         return self.email
@@ -34,8 +33,7 @@ class User(object):
             except TypeError:
                 none_count +=1
 
-        actual_ratings = (len(self.books)-none_count)
-        
+        actual_ratings = (len(self.books)-none_count)  
         return (total/actual_ratings)
 
 class Book(object):
@@ -78,8 +76,7 @@ class Book(object):
             else:
                 total+=rating
 
-        actual_ratings = (len(self.ratings)-none_count)
-        
+        actual_ratings = (len(self.ratings)-none_count)      
         return (total/actual_ratings)
 
     def __hash__(self):
