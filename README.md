@@ -14,7 +14,7 @@ A repository of the two capstone projects completed during Codecademy's Programm
     3. 'Ngram' comparison (Definition and details can be found at https://en.wikipedia.org/wiki/N-gram )
   
   
-# Tome Rater, 
+# Tome Rater 
   Context:
     This project is a display of:
     1. Object orientated programming (manipulation of 5 classes, class inheritance, attributes)
