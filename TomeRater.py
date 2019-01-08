@@ -1,12 +1,3 @@
-# why is alice in wonderland being instantiated once, but printing in catalog
-#twice
-#fix most positive user error
-#fix get_most_read error
-#then it's done!
-
-import math
-#don't forget to change back to -inf, google syntax again fml
-
 class User(object):
     def __init__(self, name, email):
         self.name = name
@@ -33,7 +24,7 @@ class User(object):
     def read_book(self,book,rating=None):
         self.books[book] = rating
 
-    #added ability to not include "Nones" in the average calculation
+    #added ability to disregard "None" ratings in the average calculation
     def get_average_rating(self):
         total=0
         none_count = 0
@@ -52,7 +43,6 @@ class Book(object):
         self.title = title
         self.isbn = isbn
         self.ratings = [ ]
-        #print("!!! BOOK "+title+" created")
 
     def get_title(self):
         return self.title
@@ -134,22 +124,16 @@ class TomeRater(object):
     def create_book(self,title,isbn):
         new_book = Book(title,isbn)
         self.books.update({new_book:None})
-        #print("! Book "+title+" added to catalog")
-        #print("* "+str(self.books))           ####### TO BE REMOVED
         return new_book
 
     def create_novel(self,title,author,isbn):
         new_novel = Fiction(title,author,isbn)
         self.books.update({new_novel:None})
-        #print("! Book "+title+" added to catalog")
-        #print("* "+str(self.books))
         return new_novel
         
     def create_non_fiction(self,title,subject,level,isbn):
         new_nf = Non_Fiction(title,subject,level,isbn)
         self.books.update({new_nf:None})
-        #print("! Book "+title+" added to catalog")
-        #print("* "+str(self.books))
         return new_nf
 
     def add_book_to_user(self,book,email,rating=None):
@@ -185,7 +169,6 @@ class TomeRater(object):
         for user in self.users.keys():
             print(user)
 
-    #can I set most_read = None ? And comparison in if statement will work?
     #method returns a list of all books read the most # of times
     def get_most_read_book(self):
         most_read_rating = -111111111
