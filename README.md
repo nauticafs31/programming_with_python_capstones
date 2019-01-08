@@ -26,7 +26,7 @@ A repository of the two capstone projects completed during Codecademy's Programm
     be added as objects with unique and shared attributes, books can be classified in terms of genre,
     and books can be added and rated by users.
     
-    Details:
+  Details:
     1. The program is then imported to a populate file and manipulated there.
     2. The highest rating user(s), highest rated book(s), most read book(s), as well as a catalog of 
     users and books can be printed, as shown in the populate file.
